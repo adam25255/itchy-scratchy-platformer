@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg4whblebg4gh"]
+
+[ext_resource type="Script" uid="uid://bmx87tym7url4" path="res://assets/sceny/instrukcie.gd" id="1_qkynr"]
+
+[node name="instrukcie" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qkynr")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 544.0
+offset_right = 783.0
+offset_bottom = 665.0
+text = "Návrat"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -438.5
+offset_top = -152.5
+offset_right = 438.5
+offset_bottom = 152.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pohyb šípkami, klávesami A,S, skok hornou šípkou, klávesou W alebo medzerníkom
+
+Potkan je nepriateľ pri kontakte s ním sa hra vráti do hlavného menu
+
+Zbierajú sa predmety v tvare mäsa, odchádza sa dverami na konci levelu Hra má dva levely. Pri dokončení posledného sa hra navráti do hlavného menu. "
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

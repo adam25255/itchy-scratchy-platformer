@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dol62v24oue6x"]
+
+[ext_resource type="Script" uid="uid://civxjk20ytf52" path="res://assets/sceny/dvere.gd" id="1_1hbqk"]
+[ext_resource type="Texture2D" uid="uid://d18tahgk2v3ds" path="res://assets/img/dvere/pixel_door.png" id="1_578hv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hbqk"]
+size = Vector2(42, 56)
+
+[node name="dvere" type="Area2D"]
+script = ExtResource("1_1hbqk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(173.75, 130.25)
+scale = Vector2(0.17206478, 0.13613231)
+texture = ExtResource("1_578hv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(174, 130)
+shape = SubResource("RectangleShape2D_1hbqk")

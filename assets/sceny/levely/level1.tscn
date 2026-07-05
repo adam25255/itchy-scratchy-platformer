@@ -1,0 +1,265 @@
+[gd_scene load_steps=13 format=4 uid="uid://cbcjqjjqfiyg8"]
+
+[ext_resource type="Texture2D" uid="uid://rlu45qaxp8ea" path="res://assets/img/bg/parallax-01.png" id="1_8fm42"]
+[ext_resource type="Texture2D" uid="uid://d3xbak77enc0c" path="res://assets/img/Tilemap/2015-02-26 [DB32](Generic Platformer)(Tileset).png" id="1_hhc4e"]
+[ext_resource type="Script" uid="uid://dkjt40700eb44" path="res://assets/skripty/parallax_2d.gd" id="1_hmbtr"]
+[ext_resource type="Script" uid="uid://bgoqie2cv0uws" path="res://assets/skripty/level1.gd" id="1_u7kg4"]
+[ext_resource type="PackedScene" uid="uid://betr2esx66of3" path="res://assets/sceny/hrac.tscn" id="2_nh0uh"]
+[ext_resource type="Texture2D" uid="uid://nb88afoobl78" path="res://assets/img/bg/parallax-02.png" id="2_y08rq"]
+[ext_resource type="Texture2D" uid="uid://lulgvvn5kbg6" path="res://assets/img/bg/parallax-03.png" id="3_y08rq"]
+[ext_resource type="PackedScene" uid="uid://haig84jfaiey" path="res://assets/sceny/potkan.tscn" id="7_imx37"]
+[ext_resource type="PackedScene" uid="uid://dqy0rmsu3wg36" path="res://assets/sceny/maso.tscn" id="8_fk4oy"]
+[ext_resource type="PackedScene" uid="uid://dol62v24oue6x" path="res://assets/sceny/dvere.tscn" id="10_o0m8j"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nh0uh"]
+texture = ExtResource("1_hhc4e")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hhcnh"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_nh0uh")
+
+[node name="LevelRoot" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_u7kg4")
+
+[node name="Parallax2D" type="Parallax2D" parent="." node_paths=PackedStringArray("hrac")]
+scroll_offset = Vector2(8.333328, -12)
+repeat_size = Vector2(1280, 0)
+ignore_camera_scroll = true
+script = ExtResource("1_hmbtr")
+hrac = NodePath("../Hrac")
+
+[node name="Parallax2D (Back)" type="Parallax2D" parent="Parallax2D"]
+scroll_scale = Vector2(0.2, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/Parallax2D (Back)"]
+texture_repeat = 2
+position = Vector2(1487, 149.66666)
+scale = Vector2(2, 0.432)
+texture = ExtResource("1_8fm42")
+region_rect = Rect2(5.526001, 76.008, 1432.322, 281.45)
+
+[node name="Parallax2D (Mid)" type="Parallax2D" parent="Parallax2D"]
+scroll_scale = Vector2(0.4, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/Parallax2D (Mid)"]
+texture_repeat = 2
+position = Vector2(1604.8333, 179.33333)
+scale = Vector2(2, 0.326)
+texture = ExtResource("2_y08rq")
+region_rect = Rect2(3.128006, 122.25, 1433.568, 236.62)
+
+[node name="Parallax2D (front)" type="Parallax2D" parent="Parallax2D"]
+scroll_scale = Vector2(0.6, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/Parallax2D (front)"]
+texture_repeat = 2
+position = Vector2(111.49991, 160.33333)
+scale = Vector2(2.8525462, 0.433)
+texture = ExtResource("3_y08rq")
+region_rect = Rect2(-3.7940063, 192.25, 1442.696, 167.5)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAA4AAAAAAAEAAAABAA4AAAAAAAEAAAACAA4AAAAAAAEAAAADAA4AAAAAAAEAAAAEAA4AAAAAAAEAAAAFAA4AAAAAAAEAAAAGAA4AAAAAAAEAAAAHAA4AAAAAAAEAAAAIAA4AAAAAAAEAAAAJAA4AAAAAAAEAAAAKAA4AAAAAAAEAAAALAA4AAAAAAAEAAAAMAA4AAAAAAAEAAAANAA4AAAAAAAEAAAAOAA4AAAAAAAEAAAAPAA4AAAAAAAEAAAAQAA4AAAAAAAEAAAARAA4AAAAAAAEAAAASAA4AAAAAAAEAAAATAA4AAAAAAAEAAAAUAA4AAAAAAAEAAAAVAA4AAAAAAAEAAAAWAA4AAAAAAAEAAAAXAA4AAAAAAAEAAAAYAA4AAAAAAAEAAAAZAA4AAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAEAAAAAAAoAAAAAAAEAAAAAAAsAAAAAAAEAAAAAAAwAAAAAAAEAAAAAAA0AAAAAAAEAAAABAAAAAAAAAAEAAAACAAAAAAAAAAEAAAADAAAAAAAAAAEAAAAEAAAAAAAAAAEAAAAFAAAAAAAAAAEAAAAGAAAAAAAAAAEAAAAHAAAAAAAAAAEAAAAIAAAAAAAAAAEAAAAJAAAAAAAAAAEAAAAKAAAAAAAAAAEAAAALAAAAAAAAAAEAAAAMAAAAAAAAAAEAAAAOAAAAAAAAAAEAAAAPAAAAAAAAAAEAAAAQAAAAAAAAAAEAAAARAAAAAAAAAAEAAAASAAAAAAAAAAEAAAATAAAAAAAAAAEAAAAUAAAAAAAAAAEAAAAVAAAAAAAAAAEAAAAWAAAAAAAAAAEAAAAXAAAAAAAAAAEAAAAYAAAAAAAAAAEAAAAZAAAAAAAAAAEAAAAaAAAAAAAAAAEAAAAaAA4AAAAAAAEAAAAaAA0AAAAAAAEAAAAaAAwAAAAAAAEAAAAaAAsAAAAAAAEAAAAaAAoAAAAAAAEAAAAaAAkAAAAAAAEAAAAaAAgAAAAAAAEAAAAaAAcAAAAAAAEAAAAaAAYAAAAAAAAAAAAaAAEAAAAAAAEAAAANAAAAAAAAAAEAAAABAA0AAAAAAAAAAAACAA0AAAAAAAAAAAADAA0AAAAAAAAAAAAEAA0AAAAAAAAAAAAHAAsAAAAAAAAAAAAIAAsAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAAUAAgAAAAAAAAAAAAWAAYAAAAAAAAAAAAXAAYAAAAAAAAAAAAYAAYAAAAAAAAAAAAZAAYAAAAAAAAAAAAZAAEAAAAAAAEAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_hhcnh")
+
+[node name="nepriatelia" type="Node2D" parent="."]
+
+[node name="potkan" parent="nepriatelia" instance=ExtResource("7_imx37")]
+position = Vector2(251.66667, 126)
+collision_layer = 4
+collision_mask = 2
+
+[node name="predmety" type="Node2D" parent="."]
+
+[node name="maso2" parent="predmety" instance=ExtResource("8_fk4oy")]
+position = Vector2(-302.6667, -155.33334)
+collision_layer = 4
+collision_mask = 2
+
+[node name="maso" parent="predmety" instance=ExtResource("8_fk4oy")]
+position = Vector2(-151.66667, -198)
+collision_layer = 4
+collision_mask = 2
+
+[node name="Hrac" parent="." instance=ExtResource("2_nh0uh")]
+position = Vector2(-15.333334, 117.333336)
+collision_layer = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 18.666666
+offset_right = 110.666664
+offset_bottom = 47.333336
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 16.666668
+offset_right = 72.0
+offset_bottom = 45.0
+text = "Skóre:"
+
+[node name="dvere" parent="." instance=ExtResource("10_o0m8j")]
+position = Vector2(237.66667, -62.666668)
+collision_layer = 4
+collision_mask = 2
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 171.66667
+offset_top = 21.666668
+offset_right = 307.6667
+offset_bottom = 52.333336
+text = "Level 1"

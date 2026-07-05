@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://betr2esx66of3"]
+
+[ext_resource type="Texture2D" uid="uid://budfecm0asl7e" path="res://assets/img/hrac/pohyb/cat1-sprite@2x.png" id="1_an5hm"]
+[ext_resource type="Script" uid="uid://bmc4a6ylbl152" path="res://assets/skripty/hrac.gd" id="1_l6u4n"]
+[ext_resource type="AudioStream" uid="uid://c3tioryc64vkq" path="res://assets/snd/jumpland.wav" id="3_s2wce"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6u4n"]
+atlas = ExtResource("1_an5hm")
+region = Rect2(0, 0, 118, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2wce"]
+atlas = ExtResource("1_an5hm")
+region = Rect2(0, 150, 118, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fbn8"]
+atlas = ExtResource("1_an5hm")
+region = Rect2(0, 300, 118, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0cjd"]
+atlas = ExtResource("1_an5hm")
+region = Rect2(0, 450, 118, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afle5"]
+atlas = ExtResource("1_an5hm")
+region = Rect2(0, 600, 118, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkpl1"]
+atlas = ExtResource("1_an5hm")
+region = Rect2(0, 750, 118, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_og2rn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6u4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2wce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fbn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0cjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afle5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkpl1")
+}],
+"loop": true,
+"name": &"pohyb",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6u4n"]
+size = Vector2(37, 50)
+
+[node name="Hrac" type="CharacterBody2D"]
+script = ExtResource("1_l6u4n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+position = Vector2(72, 71)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_og2rn")
+animation = &"pohyb"
+autoplay = "pohyb"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(72.5, 69)
+shape = SubResource("RectangleShape2D_l6u4n")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_s2wce")

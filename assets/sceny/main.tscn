@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyvy13k4raqpa"]
+
+[ext_resource type="Script" uid="uid://dhpd845rd1o1x" path="res://assets/skripty/main.gd" id="1_aq7de"]
+[ext_resource type="Texture2D" uid="uid://cq8nq5ut5af6m" path="res://assets/img/menu/rat(1).png" id="2_bdt7s"]
+[ext_resource type="Texture2D" uid="uid://chyyka5qb8xdp" path="res://assets/img/menu/cat.png" id="3_rghw6"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aq7de")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -81.0
+offset_right = 268.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hra"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 403.0
+offset_right = 907.0
+offset_bottom = 472.0
+text = "Inštrukcie"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25800002
+anchor_top = 0.81500006
+anchor_right = 0.25800002
+anchor_bottom = 0.81500006
+offset_left = 38.75998
+offset_top = -83.80005
+offset_right = 575.76
+offset_bottom = -2.8000488
+text = "Koniec"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -327.5
+offset_right = 327.5
+offset_bottom = 141.0
+grow_horizontal = 2
+text = "Itchy & Scratchy platformer
+
+
+Hlavné Menu"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579, 185)
+texture = ExtResource("2_bdt7s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(684, 190.00002)
+scale = Vector2(0.5508476, 0.42006797)
+texture = ExtResource("3_rghw6")
+
+[connection signal="pressed" from="Button" to="." method="_on_hra_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_instrukcie_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_koniec_pressed"]

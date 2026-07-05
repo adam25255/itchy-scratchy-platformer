@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://haig84jfaiey"]
+
+[ext_resource type="Script" uid="uid://bvjy7mbbenu8c" path="res://assets/skripty/potkan.gd" id="1_5ohc1"]
+[ext_resource type="Texture2D" uid="uid://cpitvugkt1ny1" path="res://assets/img/potkan/pohyb/spr_ratrun_strip4_aqua_0.png" id="1_y6wxd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ohc1"]
+atlas = ExtResource("1_y6wxd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvqdb"]
+atlas = ExtResource("1_y6wxd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ercub"]
+atlas = ExtResource("1_y6wxd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwq0q"]
+atlas = ExtResource("1_y6wxd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwy73"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ohc1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvqdb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ercub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwq0q")
+}],
+"loop": true,
+"name": &"pohyb",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6wxd"]
+size = Vector2(29, 24)
+
+[node name="potkan" type="Area2D"]
+script = ExtResource("1_5ohc1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-10, 20)
+scale = Vector2(0.625, 0.421875)
+sprite_frames = SubResource("SpriteFrames_pwy73")
+animation = &"pohyb"
+autoplay = "pohyb"
+frame = 3
+frame_progress = 0.70136505
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.5, 22)
+shape = SubResource("RectangleShape2D_y6wxd")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

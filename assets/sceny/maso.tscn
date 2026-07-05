@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqy0rmsu3wg36"]
+
+[ext_resource type="Texture2D" uid="uid://dy04151t2oadt" path="res://assets/img/predmety/MeatUI3.png" id="1_gobnr"]
+[ext_resource type="Script" uid="uid://b145ghdbcu5pc" path="res://assets/skripty/maso.gd" id="1_txk80"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txk80"]
+size = Vector2(34.5, 27)
+
+[node name="maso" type="Area2D"]
+script = ExtResource("1_txk80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(430, 316.5)
+scale = Vector2(0.075555526, 0.06444442)
+texture = ExtResource("1_gobnr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(430.75, 316.5)
+shape = SubResource("RectangleShape2D_txk80")
